@@ -1,0 +1,5 @@
+include 'webapp'
+include 'core'
+include 'security'
+include 'divo-survey'
+include 'spring-security-oauth2-provider'

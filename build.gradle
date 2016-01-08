@@ -1,0 +1,32 @@
+buildscript {
+
+}
+
+allprojects {
+	apply plugin: "java"
+	apply plugin: "eclipse"
+	apply plugin: "idea"
+
+    version = '1.0'
+	group = "com.pixisolutions.pixiplatform"
+
+}
+project(":core"){
+
+}
+
+project(":security"){
+	dependencies {
+		compile project(":spring-security-oauth2-provider")
+	}
+}
+
+project(":webapp"){
+	dependencies{
+		compile project(":core")
+		compile project(":security")
+		compile project(":divo-survey")
+	}
+}
+
+

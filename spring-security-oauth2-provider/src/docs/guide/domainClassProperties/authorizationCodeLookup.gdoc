@@ -1,0 +1,6 @@
+{table}
+*Property*                                          |   *Default Value*     |   *Meaning*
+authorizationCodeLookup.className                   |   @null@              |   Authorization code class name.
+authorizationCodeLookup.authenticationPropertyName  |   @'authentication'@  |   Authorization code class serialized authentication field.
+authorizationCodeLookup.codePropertyName            |   @'code'@            |   Authorization code class code field.
+{table}
