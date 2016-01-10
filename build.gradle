@@ -16,6 +16,9 @@ project(":webapp"){
 
 }
 
+task stage() {
+	dependsOn clean, war
+}
 
 task war(){
 	dependsOn ":webapp:clean"
