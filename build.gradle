@@ -21,10 +21,6 @@ task war(){
 	dependsOn ":webapp:war"
 }
 
-task runApp(){
-	dependsOn ":webpack:clean"
-	dependsOn ":webpack:bootRun"
-}
 
 task stage() {
 	dependsOn clean, war
