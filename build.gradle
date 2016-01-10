@@ -11,22 +11,15 @@ allprojects {
 	group = "com.pixisolutions.pixiplatform"
 
 }
-project(":core"){
-
-}
-
-project(":security"){
-	dependencies {
-		compile project(":spring-security-oauth2-provider")
-	}
-}
 
 project(":webapp"){
-	dependencies{
-		compile project(":core")
-		compile project(":security")
-		compile project(":divo-survey")
-	}
+
+}
+
+
+task war(){
+	dependsOn ":webapp:clean"
+	dependsOn ":webapp:war"
 }
 
 
