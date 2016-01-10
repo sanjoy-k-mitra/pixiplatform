@@ -48,6 +48,9 @@ dependencyManagement {
 }
 
 dependencies {
+    provided project(":core")
+    provided project(":security")
+
     provided 'org.springframework.boot:spring-boot-starter-logging'
     provided "org.springframework.boot:spring-boot-starter-actuator"
     provided "org.springframework.boot:spring-boot-autoconfigure"

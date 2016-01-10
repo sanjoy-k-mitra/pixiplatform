@@ -2,7 +2,7 @@
 grails:
     profile: web-plugin
     codegen:
-        defaultPackage: divo.survey
+        defaultPackage: com.pixisolutions.pixiplatform.divosurvey
 info:
     app:
         name: '@info.app.name@'
