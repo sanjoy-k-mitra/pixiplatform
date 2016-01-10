@@ -1,7 +1,5 @@
 package com.pixisolutions.pixiplatform.divosurvey
 
-import sun.swing.SwingUtilities2
-
 class Question {
 
     Section section;
