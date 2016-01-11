@@ -49,6 +49,11 @@ dependencyManagement {
 }
 
 dependencies {
+    compile project(":security")
+    compile 'org.grails.plugins:scaffolding'
+    compile 'org.grails.plugins:mail:2.0.0.RC4'
+
+
     provided 'org.springframework.boot:spring-boot-starter-logging'
     provided "org.springframework.boot:spring-boot-starter-actuator"
     provided "org.springframework.boot:spring-boot-autoconfigure"

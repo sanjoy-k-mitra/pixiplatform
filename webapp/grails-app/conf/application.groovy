@@ -12,6 +12,20 @@ environments {
 	}
 }
 
+grails {
+	mail {
+		host = "smtp.zoho.com"
+		port = 465
+		username = "sanjoy@pixigame.com"
+		password = "s4ge1p3zpzvu"
+//        password = "s4ge1p3zpzvu" for zoho
+		props = ["mail.smtp.auth":"true",
+				 "mail.smtp.socketFactory.port":"465",
+				 "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+				 "mail.smtp.socketFactory.fallback":"false"]
+	}
+}
+
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.pixisolutions.pixiplatform.security.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.pixisolutions.pixiplatform.security.UserRole'

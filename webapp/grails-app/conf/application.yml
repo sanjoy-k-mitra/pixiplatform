@@ -88,7 +88,7 @@ environments:
     development:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://localhost:3306/divo_survey
+            url: jdbc:mysql://localhost:3306/pixi_billing
     test:
         dataSource:
             dbCreate: update

@@ -1,5 +1,6 @@
-include 'webapp'
 include 'core'
+include 'spring-security-oauth2-provider'
 include 'security'
 include 'divo-survey'
-include 'spring-security-oauth2-provider'
+include 'billing'
+include 'webapp'

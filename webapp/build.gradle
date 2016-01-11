@@ -50,7 +50,7 @@ dependencyManagement {
 dependencies {
     compile project(":core")
     compile project(":security")
-    compile project(":divo-survey")
+    compile project(":billing")
 
     runtime 'postgresql:postgresql:8.4-702.jdbc3'
     compile "mysql:mysql-connector-java:5.1.38"
