@@ -1,4 +1,5 @@
 import com.pixisolutions.pixiplatform.billing.BillingTask
+import org.springframework.web.servlet.view.AbstractTemplateViewResolver
 
 // Place your Spring DSL code here
 beans = {

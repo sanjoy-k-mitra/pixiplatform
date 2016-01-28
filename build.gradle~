@@ -1,0 +1,20 @@
+buildscript {
+
+}
+
+allprojects {
+
+}
+
+project(":webapp"){
+	dependencies{
+		compile project(":core")
+		compile project(":divo-survey")	
+	}
+}
+
+project(":core"){
+	dependencies{
+		compile project(":security")	
+	}
+}

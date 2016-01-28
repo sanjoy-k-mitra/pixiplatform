@@ -12,4 +12,8 @@ class Customer {
     static mapping = {
         address type: 'text'
     }
+
+    String toString(){
+        return name?:super.toString()
+    }
 }

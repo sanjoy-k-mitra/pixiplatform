@@ -15,26 +15,8 @@ Dear ${customer.name},
 
 This email is to inform you that your billing cycle has been expired for ${product.name}. In order to keep your subscription active please pay via your preferred method
 
-<table>
-    <thead>
-    <tr>
-        <th>Service Name</th>
-        <th>Bill Due</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>${product.name}</td>
-        <td>${product.price}</td>
-    </tr>
-    </tbody>
-    <tfoot>
-    <tr>
-        <td>Total</td>
-        <td>${product.price}</td>
-    </tr>
-    </tfoot>
-</table>
+<g:render template="/emails/memo" model="[product: product]"/>
+
 
 Thank you for using our product.
 

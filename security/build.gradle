@@ -51,6 +51,8 @@ dependencyManagement {
 dependencies {
     compile project(":spring-security-oauth2-provider")
 
+    compile "org.grails.plugins:scaffolding"
+
     provided 'org.springframework.boot:spring-boot-starter-logging'
     provided "org.springframework.boot:spring-boot-starter-actuator"
     provided "org.springframework.boot:spring-boot-autoconfigure"

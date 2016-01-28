@@ -6,4 +6,8 @@ class Product {
     Double price;
     static constraints = {
     }
+
+    String toString(){
+        return name?:super.toString()
+    }
 }

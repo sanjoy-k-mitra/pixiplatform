@@ -15,16 +15,32 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <div class="navbar-brand">
-                    <a href="/">IHT-Barisal</a>
+                    <a href="/">Webnit-Billing</a>
                 </div>
             </div>
             <ul class="nav navbar-nav">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="${controllerName == 'account' ? 'active' : ''}"><g:link controller="account">Accounts</g:link> </li>
-                    <li class="${controllerName == 'payment' ? 'active' : ''}"><g:link controller="payment">Payments</g:link> </li>
+                <sec:ifAnyGranted roles="ROLE_USER,ROLE_ADMIN">
+                    <li class="${controllerName == 'customer' ? 'active' : ''}"><g:link controller="customer">Customers</g:link> </li>
+                    <li class="${controllerName == 'service' ? 'active' : ''}"><g:link controller="serviceProduct">Services</g:link> </li>
+                    <li class="${controllerName == 'subscription' ? 'active' : ''}"><g:link controller="subscription">Subscriptions</g:link> </li>
 
-                </ul>
+                </sec:ifAnyGranted>
+                <sec:ifAllGranted roles="ROLE_ADMIN">
+                    <li class="${controllerName == 'user' ? 'active' : ''}"><g:link controller="user">Users</g:link> </li>
+                    <li class="${controllerName == 'userRole' ? 'active' : ''}"><g:link controller="userRole">User Roles</g:link> </li>
+                </sec:ifAllGranted>
+                %{--<ul class="nav navbar-nav navbar-right">--}%
+                    %{--<li class="${controllerName == 'account' ? 'active' : ''}"><g:link controller="account">Accounts</g:link> </li>--}%
+                    %{--<li class="${controllerName == 'payment' ? 'active' : ''}"><g:link controller="payment">Payments</g:link> </li>--}%
+
+                %{--</ul>--}%
             </ul>
+            <sec:ifLoggedIn>
+                <form class="navbar-right form-horizontal" method="post" action="/logout">
+                    <button class="btn btn-default" type="submit">Logout</button>
+                </form>
+            </sec:ifLoggedIn>
+
         </div>
     </header>
 

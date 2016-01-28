@@ -2,7 +2,7 @@
 grails:
     profile: web-plugin
     codegen:
-        defaultPackage: security
+        defaultPackage: com.pixisolutions.pixiplatform.security
 info:
     app:
         name: '@info.app.name@'
